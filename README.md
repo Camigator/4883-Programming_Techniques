@@ -1,10 +1,9 @@
-# 3013-ALG-ONeal
-Second try at a first Repository
+# 4883 - Programming Techniques
 
 
 ## Cameron O'Neal
 
-#### Repo: 3013 Algorithms Repo
+#### Repo: Programming Tech. Repo
 #### Professor Account : https://github.com/Camigator/4883-Programming_Techniques
 #### Email: oneal.cameron12@gmail.com
 #### Website: https://repl.it/repls
