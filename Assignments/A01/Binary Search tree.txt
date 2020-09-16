@@ -1,0 +1,34 @@
+Binary Search Tree Problem 12347
+
+My approach to this problem would to first set up the binary tree given the inputs and roots.
+Followed by the lesson we learned last class and in 3013, to organize the list in post post order.
+
+Left child Value
+Right Child Value 
+Root Node Value
+
+
+Binary Search Tree Problem 1264
+21435
+24135
+24315
+24351
+21453
+24153
+24513
+24531
+
+My approach to this problem is understanding that the order of left and right child dont matter. But 
+the order of left Children compared to their left root do.
+
+Saying if my left child had one node ( being "1" in this case ) then it can go in any order because
+will be the only node. 
+
+Now the right path has 3 idividual nodes ( " 4 , 3, 5 " )
+4 must come first as it is the predecessor to the 3 , 5. We understand that 3 and 5 are single nodes that have node
+children so, they can be placed after the 4 in any order. 
+
+my way of solving this is to create the original tree, and then compare it ot everycobination after that.
+that there are only 24 combination it will be pretty easy to find the permutations of the graph.
+
+We can guess that any list in order will only have one permutation
