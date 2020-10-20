@@ -1,0 +1,49 @@
+
+Coin Problem: 11137 - Ingenuous Cubrency
+
+Given a set of coin values coins = {c1, c2,..., ck} and a target sum of money n, our task is to form the sum n using as few coins as possible. 
+The problem can be solved using a greedy algorithm but at time being greedy does not always give you the optimal solution. Now the way to approach 
+this problem is dynamic programming (i.e using recursion). We can use recursion to iterate through all solutions to find the optimal solution.
+
+int solve(int x) {
+  if (x < 0) return INF;      // no negative chnage can be given
+  if (x == 0) return 0;       // there is no change given
+  int best = INF;
+  for (auto c : coins) {
+    best = min(best, solve(x-c)+1);     // recursive call to find best optimal solution
+  }
+  return best;
+}
+
+This is the basic implementation of a recursive function. You could leave it just like this but we should improve the problem at hand. 
+The idea of dynamic programming is to use memoization to efficiently calculate values of a recursive function. This means that the values
+of the function are stored in an array after calculating them. For each parameter, the value of the function is calculated recursively only
+once, and after this, the value can be directly retrieved from the array.
+
+int solve(int x) {
+if (x < 0) return INF;
+if (x == 0) return 0;
+if (ready[x]) return value[x];
+int best = INF;
+for (auto c : coins) {
+best = min(best, solve(x-c)+1);
+}
+value[x] = best;
+ready[x] = true;
+return best;
+}
+
+We've added Value and Ready to store values of already calculated values. This speeds up our recursive calls by ten fold.
+
+
+
+
+
+
+
+
+
+
+
+
+
